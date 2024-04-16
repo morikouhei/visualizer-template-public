@@ -58,7 +58,8 @@ const FileUploader: FC<FileUploaderProps> = ({ setVisualizerSettingInfo }) => {
         <input
           type="file"
           onChange={onFolderUpload}
-          directory="" // エディタでエラーが出るが気にしない
+          /* @ts-expect-error なんか失敗する */
+          directory=""
           webkitdirectory=""
         />
       </p>
